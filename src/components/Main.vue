@@ -5,6 +5,8 @@ import { ref } from 'vue';
  quote.value = 'First, write the code. Then, solve the problem.';
  author.value = 'Murtaza Mirzad';
  const href = ref("https://www.professorpickle.com")
+ const isBtnDisabled = ref(true)
+
 </script>
 
 <template>
@@ -13,7 +15,10 @@ import { ref } from 'vue';
       <p>{{ quote }}</p>
       <a :href="href" target="_blank">{{ author }}</a>
     </section>
-    <button>Another!</button>
+     <section id="buttons">
+        <button>Another!</button>
+        <button :disabled="isBtnDisabled">Share</button>
+    </section>
   </main>
 </template>
 
@@ -75,5 +80,10 @@ button {
 }
 button:hover {
     transform: scale(1.05);
+}
+  button:disabled {
+  background:grey;
+  cursor: not-allowed;
+  opacity:0.5;
 }
 </style>
