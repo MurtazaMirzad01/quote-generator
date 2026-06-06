@@ -1,9 +1,12 @@
 <script setup>
+import {ref} from 'vue'
+  const year = ref("2025")
+  const hreeef = ref("https://www.professorpickle.com")
 </script>
 
 <template>
   <footer>
-    Created by <span>Professor Pickle</span>
+    Created by <a :href="hreeef" target="_blank">Professor Pickle</a> &copy; {{ year }}
   </footer>
 </template>
 
@@ -19,5 +22,8 @@ footer {
 
 span {
     font-family: cursive;
+}
+a {
+    color: #CCD6D9;
 }
 </style>

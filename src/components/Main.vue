@@ -1,11 +1,17 @@
 <script setup>
+import { ref } from 'vue';
+ const quote  = ref('First, solve the problem. Then, write the code.');
+ const author = ref('John Johnson');
+ quote.value = 'First, write the code. Then, solve the problem.';
+ author.value = 'Murtaza Mirzad';
+ const href = ref("https://www.professorpickle.com")
 </script>
 
 <template>
   <main>
     <section>
-      <p>First, solve the problem. Then, write the code.</p>
-      <span>John Johnson</span>
+      <p>{{ quote }}</p>
+      <a :href="href" target="_blank">{{ author }}</a>
     </section>
     <button>Another!</button>
   </main>
@@ -45,12 +51,13 @@ p::after {
     content: '"';
 }
 
-span {
+a {
     align-self: end;
     color: #406473;
+    text-decoration: none;
 }
 
-span::before {
+a::before {
     content: "- ";
 }
 
