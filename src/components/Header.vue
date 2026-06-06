@@ -1,19 +1,15 @@
 <script setup>
-    import {ref} from 'vue'
-    const framework =  ref('Vue.js')
-
 </script>
 
 <template>
   <header>
-    <h1>Welcome to {{ framework }}</h1>
+    <h1>Quote generator</h1>
   </header>
 </template>
 
 <style scoped>
   header {
-    background-color: #42b983;
-    color: white;
-    padding: 20px;
+    color: #CCD6D9;
+    margin-bottom: 25px;
   }
 </style>

@@ -1,22 +1,23 @@
 <script setup>
-  import {ref} from 'vue'
-  const year = ref(2024)
-
 </script>
 
 <template>
   <footer>
-    <p>Copyright {{year}}</p>
+    Created by <span>Professor Pickle</span>
   </footer>
 </template>
 
 <style scoped>
-  footer {
-    background-color: #35495e;
-    color: white;
-    padding: 10px;
-  }
-  footer p {
-    color: #42b983;
-  }
+footer {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    text-align: center;
+    color: #CCD6D9;
+    padding-bottom: 20px;
+}
+
+span {
+    font-family: cursive;
+}
 </style>
